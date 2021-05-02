@@ -1,0 +1,23 @@
+Dim sumAmount As Double = 0
+Dim premiumValue As Double
+Dim vatvalue As Double
+For Each row As DataRow In ds.Tables("item1").Rows
+TextBox1.Text = DirectCast(row, System.Data.DataRow)("name").ToString()
+TextBox8.Text = DirectCast(row, System.Data.DataRow)("bname").ToString()
+TextBox2.Text = DirectCast(row, System.Data.DataRow)("place").ToString()
+TextBox3.Text = DirectCast(row, System.Data.DataRow)("date").ToString()
+TextBox4.Text = DirectCast(row, System.Data.DataRow)("year").ToString()
+ListBox1.Items.Add(DirectCast(row, System.Data.DataRow)("lot_no").ToString())
+ListBox2.Items.Add(DirectCast(row, System.Data.DataRow)("amt").ToString())
+
+
+
+sumAmount = sumAmount + Convert.ToDouble(DirectCast(row, System.Data.DataRow)("amt"))
+
+Next
+premiumValue = (0.175 * sumAmount)
+vatvalue = (0.07 * premiumValue)
+TextBox6.Text = sumAmount.ToString()
+TextBox5.Text = premiumValue.ToString()
+TextBox7.Text = vatvalue.ToString()
+TextBox9.Text = Math.Round(sumAmount + premiumValue + vatvalue, 2).ToString()

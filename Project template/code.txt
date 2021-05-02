@@ -1,0 +1,18 @@
+retrieving order history and game
+
+25
+20/03   2,5,7,9            5 characters
+25/05   3,8,9
+for(i=1;i<S.getLength();i++) checking characters
+{
+if(S.charAt(i)==" , ")
+continue;
+else
+   int ch=S.charAt(i);
+}
+
+CREATE TABLE [dbo].[trialdb]
+(
+	[name] NVARCHAR(50) NOT NULL, 
+    [age] INT NULL 
+)
