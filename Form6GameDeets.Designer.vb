@@ -179,5 +179,3 @@ Partial Class Form6GameDeets
     Friend WithEvents Label10 As Label
 End Class
 
-'shalaaaalalalalalallalla
-'newshalalalalalalalalal
